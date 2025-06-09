@@ -1,25 +1,25 @@
 import React from 'react'
-import Header from './components/Header'
-import { Greeting as Greet } from './components/Greeting'
-import Counter from './components/Counter';
-import LikesCounter from './components/LikesCounter';
+import Navbar from './components/Navbar'
+import Home from './components/Home'
+import About from './components/About'
+import Pricing from './components/Pricing'
+import Services from './components/Services'
+import Contact from './components/Contact'
+import { Routes, Route } from 'react-router-dom'
+import SignUp from './components/SignUp'
 
 export default function App() {
-
-  const brandName = "BSSReact";
-
-  const navbarData = ["Home", "About", "Contact", "Login", "Register", "Logout"];
-
-  const userName = "John Doe";
-
-
   return (
     <div>
-      <Header brand={brandName} navData={navbarData}/>
-      <Greet name = {userName}/>
-      <Counter />
-      <LikesCounter />
-
+      <Navbar />
+      {/* <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/about" element={<About />}/>
+        <Route path="/services" element={<Services />}/>
+        <Route path="/pricing" element={<Pricing />}/>
+        <Route path="/contact" element={<Contact />}/>  
+      </Routes> */}
+      <SignUp />
     </div>
   )
 }
