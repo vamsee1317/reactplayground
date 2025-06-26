@@ -1,5 +1,7 @@
 // JSX : (Javascript XML)
 
+import { use, useEffect } from "react"
+
 // JSX is a syntax extension for JavaScript that allows you to write HTML-like code in your JavaScript files.
 
 // KeyPoints :
@@ -209,3 +211,96 @@ if(isLoggedIn){
 // Form Validations
 // Handling Form Errors
 // Submitting data for an API or Server
+
+
+
+// Topics for Today : 
+
+// What is API integration in React ?
+
+    // API integration means connecting your react app to a sever to get or send data (like Users, posts, products...etc).
+
+    // API stands for Application Programming Interface.
+
+    // API endpoint : https://dummyjson.com/users
+
+    // Examples :
+        // Getting a user info from a server
+        // Sending a new user to a server
+        // Fetching a product info depending on user search.
+
+    // useEffect Hook:
+    // useEffect is a hook that allows you to run some code after rendering a component.
+    // useEffect hook is used to handle side effects like API calls, setting timers, and more.
+
+
+// Using Fetch() to get data
+// Using Axios to get data
+// Handling loading & error states
+// Rendering data in a list.
+
+
+// Axios :
+// Axios is a popular JavaScript library used for making HTTP requests from the client-side.
+// Axios is a promise-based HTTP client for the browser and node.js.
+// Axios is used to make HTTP requests (GET, POST, PUT, DELETE, etc.) to a server or API.
+
+// Steps to work with Axios
+    // 1. Install Axios
+    // 2. Import Axios
+    // 3. Make a request to the API
+    // 4. Handle the response
+    // 5. Display the data
+
+
+// useEffect ?
+// useEffect is a side-effect hook in React.
+// It lets you run some code after rendering a component.
+// Like fetching data from an API, setting timers, and DOM updates..etc.
+
+
+// Key Points :
+// useEffect runs after the component renders.
+// You can control when it runs using the dependency array.
+// You can clean up after it runs using the return function.
+
+
+// Syntax : 
+
+useEffect(()=>{
+    // code runs after the component renders
+
+    return () =>{
+        // Optional cleanup code
+    }
+}, [dependencies])
+
+// Runs only once :
+
+useEffect(()=>{
+    console.log("Runs only once");
+}, [])
+
+// Runs on specific state change
+useEffect(()=>{
+    console.log("Likes Count Changed");
+},[count])
+
+
+// Runs on Every Render :
+useEffect(()=>{
+    console.log("Runs on every render");
+})
+
+
+// CleanUp : Clear Timer or Listener
+
+useEffect(()=>{
+    const interval = setInterval(()=>{
+        console.log("Running every second");
+    }, 1000);
+
+    return () =>{
+        clearInterval(interval); // Cleanup
+    }
+}, [])

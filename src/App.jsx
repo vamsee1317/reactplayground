@@ -7,6 +7,9 @@ import Services from './components/Services'
 import Contact from './components/Contact'
 import { Routes, Route } from 'react-router-dom'
 import SignUp from './components/SignUp'
+import UserList from './components/UserList'
+import Counter from './components/Counter'
+import ProductList from './components/ProductList'
 
 export default function App() {
   return (
@@ -20,6 +23,9 @@ export default function App() {
         <Route path="/contact" element={<Contact />}/>  
       </Routes> */}
       <SignUp />
+      <UserList />
+      <Counter />
+      <ProductList />
     </div>
   )
 }
