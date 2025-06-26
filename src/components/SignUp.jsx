@@ -46,7 +46,7 @@ export default function SignUp() {
             console.log(formData);
             alert("Form submitted successfully");
             // API call or server trigger
-            
+
         }else{
             alert("Please fill the form correctly");
         }
@@ -63,6 +63,8 @@ export default function SignUp() {
         const {name, value} = e.target;
         setFormData((prev)=>({...prev, [name] : value}));
     }
+
+    console.log(formData);
 
 
   return (
@@ -131,3 +133,27 @@ export default function SignUp() {
     </div>
   );
 }
+
+
+
+// const numListOne = [10, 20, 30];
+// const numListTwo = [40, 50, 60];
+
+// const numFinalList = [...numListOne, ...numListTwo, ...numListOne];
+// console.log(numFinalList);
+
+
+// // Object spread operator
+// var person = { name: 'John', age: 30 };
+
+// var person = {
+//     name : "Jhonny Walker"
+// }
+// const employeeInfo = {
+//     ...person,
+//     occupation: 'Developer',
+//     address: '123 Main St',
+//     ...person
+// }
+
+// console.log(employeeInfo)
