@@ -304,3 +304,38 @@ useEffect(()=>{
         clearInterval(interval); // Cleanup
     }
 }, [])
+
+
+// React Lists & keys :
+
+// What is List Rendering in React ?
+
+// In react, list rendering means using .map() to loop through an array and render multiple JSX elements dynamically.
+
+// Key points :
+
+// 1. react uses .map() to iterate over arrays and return components or JSX elements.
+// 2. Each item must have a unique key prop for performance and identification.
+// 3. Keys help React identify which items have changed, are added, or are removed.
+// 4. The key should be unique, consistent ID (not index unless static).
+
+// Real Life Example :
+
+// Think of a class attendance sheet.
+// Each student (list item) has a unique ID (key) so you can track who is present, missing or late.
+
+// Syntax : 
+
+{
+    array.map((item, index)=>(
+        <Component key={item.index}/>
+    ))
+}
+
+
+// Common Mistakes with Keys :
+
+// Mistake                      Why it's wrong
+// 1. Using index as key        Index changes when items are added or removed.
+// 2. Using a non-unique value  Multiple items have the same key.
+// 3. Not using a key at all    React can't identify items.

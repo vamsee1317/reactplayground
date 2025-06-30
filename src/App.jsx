@@ -10,6 +10,7 @@ import SignUp from './components/SignUp'
 import UserList from './components/UserList'
 import Counter from './components/Counter'
 import ProductList from './components/ProductList'
+import CourseList from './components/CourseList'
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
       <UserList />
       <Counter />
       <ProductList />
+      <CourseList />
     </div>
   )
 }
