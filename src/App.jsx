@@ -11,6 +11,9 @@ import UserList from './components/UserList'
 import Counter from './components/Counter'
 import ProductList from './components/ProductList'
 import CourseList from './components/CourseList'
+import FocusInput from './components/FocusInput'
+import Timer from './components/Timer'
+import TimerWithRef from './components/TimerWithRef'
 
 export default function App() {
   return (
@@ -23,11 +26,15 @@ export default function App() {
         <Route path="/pricing" element={<Pricing />}/>
         <Route path="/contact" element={<Contact />}/>  
       </Routes> */}
+            <FocusInput />
+            <Timer />
+            <TimerWithRef />
       <SignUp />
       <UserList />
       <Counter />
       <ProductList />
       <CourseList />
+
     </div>
   )
 }

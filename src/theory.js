@@ -1,6 +1,6 @@
 // JSX : (Javascript XML)
 
-import { use, useEffect } from "react"
+import { use, useEffect, useRef } from "react"
 
 // JSX is a syntax extension for JavaScript that allows you to write HTML-like code in your JavaScript files.
 
@@ -339,3 +339,63 @@ useEffect(()=>{
 // 1. Using index as key        Index changes when items are added or removed.
 // 2. Using a non-unique value  Multiple items have the same key.
 // 3. Not using a key at all    React can't identify items.
+
+
+// React Hooks : 
+
+// What are React Hooks ?
+
+// Hooks are functions that let you "hook into" React features like state, lifecycle, and context from functional components.
+
+// Key points :
+
+// Hooks were introduced in React 16.8. in the year 2019.
+// Hooks allow you to use state and other React features without writing a class.
+// They let us use state and lifecycle methods in functional components. (Which was earlier only possible with class components).
+// Hooks do not work inside class components.
+// All hooks start with the word "use".
+
+// Most commonly used hooks :
+
+// Hook                 Purpose
+// useState()           To add state to functional components.
+// useEffect()          To handle side effects like API calls, DOM mutations, and timers.
+// useContext()         To access context across functional components.
+// useReducer()         To manage complex state changes.(Like Redux).
+// useCallback()        To memoize a function so it's not recreated on every render.
+// useMemo()            To memoize a value so it's not recalculated on every render.
+// useRef()             To access the DOM or a value across multiple renders.
+
+
+// UseRef :
+
+// useRef is react hook that gives you a box(object) where you can store any value, like numbers, strings, DOM elements...etc.
+
+// This value is stored in .current, and changing it will not re-render the component.
+
+// Quick Break :
+// useState - stores values and triggers re-renders
+// useRef - stores values and does not trigger re-renders.
+
+// Code example :
+
+const myRef = useRef("Hellooo");
+console.log(myRef.current); // Outputs: Hellooo
+myRef.current = "World"; // The value will be changed but no re-render occurs,
+
+
+// UseState vs UseRef :
+
+// What is useState ?
+// - useState in React is a hook used to store and update values in functional components.
+// - When the value changes using setState, the component re-renders (To show the new value on UI).
+
+// const [count, setCount] = useState(0);
+
+
+// What is useRef ?
+// - useRef is used to store a mutable value or refer to a DOM element.
+// - Changing the value of useRef does not trigger a re-render.
+// - It's useful for :
+    // Accessing DOM nodes (Like a input).
+    // Storing values silently (Like a counter or timer).
